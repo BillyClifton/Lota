@@ -16,7 +16,8 @@
 	<script type="text/ng-template" id="/home.html">
 
 	<div class="page-header">
-	<h1>Flapper News</h1>
+	<h1>Lota</h1>
+	Look Openly To All
 	</div>
 
 	<div ng-repeat="post in posts | orderBy:'-upvotes'">
@@ -24,10 +25,6 @@
 	ng-click="incrementUpvotes(post)"></span>
 	{{post.upvotes}}
 	<span style="font-size:20px; margin-left:10px;">
-	<a ng-show="post.link" href="{{post.link}}">
-	{{post.title}}
-	</a>
-	<span ng-hide="post.link">
 	{{post.title}}
 	</span>
 	<span>
@@ -49,8 +46,8 @@
 	<div class="form-group">
 	<input type="text"
 	class="form-control"
-	placeholder="Link"
-	ng-model="link"></input>
+	placeholder="Text"
+	ng-model="text"></input>
 	</div>
 	<button type="submit" class="btn btn-primary">Post</button>
 	</form>
@@ -58,10 +55,7 @@
 	<script type="text/ng-template" id="/posts.html">
 	<div class="page-header">
 	<h3>
-	<a ng-show="post.link" href="{{post.link}}">
-	{{post.title}}
-	</a>
-	<span ng-hide="post.link">
+	<span>
 	{{post.title}}
 	</span>
 	</h3>
